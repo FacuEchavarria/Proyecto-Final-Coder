@@ -2,10 +2,23 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+    color: white;
+
+    a{
+        text-decoration: none;
+    }
 }
 
+/*Root*/
+:root {
+    --timing-function: cubic-bezier(0.82, 0.2, 0.42, 1);
+}
+/*Fin Root*/
+
 /*Variables*/
-$azulFondo:#11185A;
+$azulOscuro:#0d1242;
+$azulFondo:#0F1758;
 $BlancoFondo:#E6E2ED;
 /*Fin Variables*/
 
@@ -23,9 +36,26 @@ $BlancoFondo:#E6E2ED;
     justify-content: center;
     align-items: center;
 }
+.fondoAzul{
+	background-color: $azulFondo;
+}
+.fondoBlanco{
+	background-color: $BlancoFondo;
+}
 /*Fin Extend*/
 
 /*Msps*/
+$fotosInicio:
+pelotas mundial1,
+botines nike1,
+camisetas boca1;
+
+$redes: 
+insta #c13584,
+fb #4267B2,
+tw #1DA1F2,
+yt #FF0000,
+em #006aff;
 /*Fin Msps*/
 
 /*Boton Scroll*/
@@ -37,14 +67,12 @@ $BlancoFondo:#E6E2ED;
 	z-index: 100;
 	a {
 		font-size: 20px;
-		@include size(100%,100% ,none );
-		text-decoration: none;
+		@include size(100%,100% ,$BlancoFondo );
 		@extend .flexCenter;
-		border: 2px #0f1650 solid;
-		background-color: $BlancoFondo;
+		border: 2px $azulOscuro solid;
 		transition: all 0.4s;
 		i {
-			color: #0f1650;
+			color: $azulOscuro;
 			transition: all 0.4s;
 		}
 		&:hover {
@@ -60,8 +88,553 @@ $BlancoFondo:#E6E2ED;
 }
 /*Fin Boton Scroll*/
 
-/*Barra dezplazamiento*/
-/*Fin Barra dezplazamiento*/
+/*Body*/
+body {
+	background-color: $BlancoFondo;
+	display: flex;
+	flex-direction: column;
 
-/*Header*/
-/*Fin Header*/
+    /*Barra dezplazamiento*/
+    &::-webkit-scrollbar{
+        width: 12px;
+    }
+    &::-webkit-scrollbar-thumb{
+		background-color: $azulFondo;
+        border-radius: 20px;
+        border: 3px solid $azulFondo;
+    }
+    &::-webkit-scrollbar-track{
+		border-left: 1px solid $BlancoFondo;
+        background: $BlancoFondo;
+    }
+    /*Fin Barra dezplazamiento*/
+}
+/*Fin Body*/
+
+/*---------------------------Header---------------------------*/
+nav {
+	background-color: $azulOscuro;
+	font-size: 25px;
+	border-bottom: 2px $BlancoFondo solid;
+	width: 100%;
+
+	.nav-link {
+		margin: 5px 20px;
+
+		&:hover {
+			color: grey !important;
+		}
+	}
+}
+/*---------------------------Fin Header---------------------------*/
+
+/*---------------------------Inicio---------------------------*/
+/*Titulo Inicio*/
+.nombrePrincipal {
+	@include size(700px,100% ,none );
+	background-image: url(../Multimedia/Imagenes/EstadioFutbol1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	@extend .flexCenter;
+	justify-content: flex-start;
+	.nombreTienda {
+		@include size(300px,40% ,none );
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		.textoPrincipal {
+			background-color: rgba(0, 0, 0, 50%);
+			p {
+				padding: 20px 30px;
+				font-size: 20px;
+			}
+		}
+		h1 {
+			text-align: center;
+			font-size: 50px;
+			font-weight: 100;
+			letter-spacing: 10px;
+		}
+	}
+}
+/*Fin Titulo Inicio*/
+
+/*Lo nuevo*/
+.nuevoPrincipal {
+	@include size(1400px,100% ,none );
+	background-image: url(../Multimedia/Imagenes/wave\ \(1\).svg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: top;
+	padding-bottom: 120px;
+	@extend .flexCenter;
+	justify-content: flex-end;
+	flex-direction: column;
+	h2 {
+		font-size: 40px;
+		letter-spacing: 10px;
+		padding-bottom: 30px;
+	}
+	.imgNuevoPrincipal {
+		@include size(700px,100% ,rgba(243, 243, 243, 20%) );
+		display: flex;
+		justify-content: center;
+		.botinesAF50 {
+			width: 45%;
+			background-image: url(../Multimedia/Imagenes/Botines\ adidas\ fondo.jpg);
+			background-position: center;
+			background-size: cover;
+			@extend .flexCenter;
+			flex-direction: column;
+			justify-content: flex-end;
+			
+		}
+		.camisetaArg2022 {
+			width: 45%;
+			background-image: url(../Multimedia/Imagenes/camiseta\ arg\ fondo.jpg);
+			background-position: right;
+			background-size: cover;
+			@extend .flexCenter;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+		h3 {
+			font-size: 26px;
+			font-weight: 300;
+			letter-spacing: 5px;
+		}
+		a{
+			color: white;
+			font-size: 22px;
+			font-weight: 100;
+			background-color: rgba($color: #000000, $alpha: 0.2);
+            width: 170px;
+            text-align: center;
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            overflow: hidden;
+            transition: color 0s 0.25s var(--timing-function);
+            border: 1px solid $BlancoFondo;
+			margin-bottom: 50px;
+			margin-top: 15px;
+			border-radius: 75px;
+
+            &::before, &::after{
+                position: absolute;
+                left: 0;
+                width: 100%;
+            }
+            &::before{
+                content: '';
+                top: 50%;
+                transform: translate(-101%, -50%);
+                height: 100%;
+                z-index: 1;
+                background:white;
+                transition: transform 0.5s var(--timing-function);
+                background-color: $BlancoFondo;
+            }
+            &::after{
+                content: attr(data-icon);
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: white;
+                opacity: 0;
+                transition: opacity 0s 0.25s var(--timing-function);
+            }
+            &:hover{
+                color: transparent;
+                transition: all 500ms;
+            }
+            &:hover::before{
+                transform: translate(101%, -50%);
+                background-color: $BlancoFondo;
+            }
+            &:hover::after{
+                opacity: 1;
+            }
+    	}
+	}
+}
+/*Fin Lo nuevo*/
+
+/*Galeria de inicio*/
+.galeria {
+	@include size(auto,100% ,none );
+	padding-bottom: 200px;
+	.svg {
+		@include size(auto,100% ,none );
+	}
+	.fotosGaleria {
+		@include size(500px,100% ,none );
+		display: flex;
+		justify-content: space-around;
+
+		@each $num, $foto in $fotosInicio {
+			.i#{$num}{
+				background-image: url(../Multimedia/Imagenes/#{$foto}.jpg);
+				height: 100%;
+				width: 20%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				border: 3px $azulFondo solid;
+				transition: all 0.5s;
+
+				&:hover {
+					transform: scale(1.1);
+					transition: all 0.5s;
+				}
+			}
+			.fondoGris {
+				@include size(100%,100%,rgba(217, 217, 217, 70%) );
+				transition: all 0.5s;
+				a {
+					color: black;
+					font-size: 30px;
+					font-weight: 350;
+					text-decoration: none;
+					height: 100%;
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					&:hover {
+						color: transparent;
+					}
+				}
+				&:hover {
+					background: none;
+					transition: all 0.5s;
+				}
+			}
+		}	
+	}
+}
+/*Fin Galeria de inicio*/
+
+/*Responsive Inicio*/
+@media only screen and (max-width:529px) {	
+	.nombrePrincipal {
+		height: 300px;
+		background-position: center;
+		background-size: cover;
+		.nombreTienda {
+			width: 60%;
+			height: 40px;
+			h1 {
+				font-size: 25px;
+				font-weight: 100;
+			}
+			.textoPrincipal {
+				display: none;
+			}
+		}
+	}
+	.nuevoPrincipal {
+		height: 900px;
+		padding-bottom: 120px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		h2 {
+			font-size: 30px;
+		}
+		.imgNuevoPrincipal {
+			width: 100%;
+			height: 500px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			.camisetaArg2022 {
+				width: 90%;
+				height: 50%;
+				background-size: cover;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				background-position: center;
+			}
+			h3 {
+				font-size: 16px;
+				font-weight: 100;
+				text-align: center;
+			}
+			.botinesAF50 {
+				width: 90%;
+				height: 50%;
+				background-size: cover;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: center;
+				background-position: center;
+			}
+			.botonComprar {
+				margin-bottom: 20px;
+				padding: 8px 20px;
+				font-size: 16px;
+			}
+		}
+	}
+	.galeria {
+		.fotosGaleria {
+			height: 750px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
+			width: 100%;
+			.fotoInd {
+				height: 25%;
+				width: 50%;
+				.fondoGris {
+					a {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:530px) and (max-width:1299px) {
+	.nombrePrincipal {
+		height: 300px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		.nombreTienda {
+			width: 50%;
+			height: 80px;
+			h1 {
+				font-size: 30px;
+				font-weight: 100;
+			}
+			.textoPrincipal {
+				display: none;
+			}
+		}
+	}
+	.nuevoPrincipal {
+		height: 600px;
+		padding-bottom: 120px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		h2 {
+			font-size: 30px;
+		}
+		.imgNuevoPrincipal {
+			height: 50%;
+			h3 {
+				font-size: 16px;
+				font-weight: 100;
+				text-align: center;
+			}
+			.botonComprar {
+				margin-bottom: 20px;
+				padding: 11px 30px;
+				font-size: 16px;
+			}
+		}
+	}
+	.galeria {
+		.fotosGaleria {
+			height: 250px;
+			.fotoInd {
+				height: 100%;
+				width: 25%;
+				.fondoGris {
+					a {
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width:601px) and (max-width:1299px) {
+	.nombrePrincipal {
+		background-size: cover;
+	}
+}
+/*Fin Responsive Inicio*/
+/*---------------------------Fin Inicio---------------------------*/
+
+/*---------------------------Footer---------------------------*/
+footer {
+	@include size(400px,100%,none );
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-template-rows: (80%, 20%);
+	justify-items: center;
+	border-top: 2px $BlancoFondo solid;
+	.footerArriba {
+		grid-row: 1/2;
+		grid-column: 1/3;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		ul {
+			list-style: none;
+			display: flex;
+		}
+		.navFooter {
+			ul {
+				li {
+					margin: 5px 10px;
+					font-size: 20px;
+					display: flex;
+				}
+			}
+		}
+		.redesFooter {
+			ul {
+				li {
+					margin: 10px 30px;
+					font-size: 28px;
+				}
+			}
+		}
+	}
+	.navFooter {
+		@include size(100%,60%,none );
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		ul {
+			li {
+				a {
+					text-decoration: none;
+					padding: 15px 25px;
+					transition: 0.2s;
+					&:hover {
+						background-color: $BlancoFondo;
+						color: $azulFondo;
+						transition: 0.2s;
+					}
+				}
+			}
+		}
+	}
+	.redesFooter {
+		@include size(100%,40%,none);
+		@extend .flexCenter;
+		
+		ul{
+			li{
+				a{
+					padding: 10px;
+					@each $red, $color in $redes {
+						.a#{$red}:hover{
+							color:#{$color};
+							transition: all 0.3s;
+						}
+					}
+				}
+			}
+		}
+
+			
+		
+	}
+	.derechosAutor {
+		border-top: 1px solid rgba(white, 0.1);
+		grid-row: 2/3;
+		grid-column: 1/3;
+		width: 100%;
+		text-align: center;
+		align-self: flex-end;
+		font-size: 18px;
+	}
+}
+
+/*Responsive Footer*/
+@media only screen and (max-width:529px) {
+	footer {
+		ul {
+			flex-wrap: wrap;
+		}
+		height: 300px;
+		.footerArriba {
+			.navFooter {
+				ul {
+					li {
+						margin: 5px 5px;
+						font-size: 16px;
+					}
+				}
+			}
+			.redesFooter {
+				ul {
+					li {
+						margin: 5px 20px;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.navFooter {
+			ul {
+				li {
+					a {
+						padding: 5px 10px;
+					}
+				}
+			}
+		}
+		.derechosAutor {
+			font-size: 14px;
+		}
+	}
+}
+@media only screen and (min-width:530px) and (max-width:1299px)  {
+	footer {
+		ul {
+			flex-wrap: wrap;
+		}
+		height: 200px;
+		.footerArriba {
+			.navFooter {
+				ul {
+					li {
+						margin: 5px 5px;
+						font-size: 16px;
+					}
+				}
+			}
+			.redesFooter {
+				ul {
+					li {
+						margin: 5px 20px;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+		.navFooter {
+			ul {
+				li {
+					a {
+						padding: 5px 15px;
+					}
+				}
+			}
+		}
+		.derechosAutor {
+			font-size: 14px;
+		}
+	}
+}
+/*Fin Responsive Footer*/
+/*---------------------------Fin Footer---------------------------*/

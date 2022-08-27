@@ -2,17 +2,36 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
+  color: white;
+}
+* a {
+  text-decoration: none;
 }
 
+/*Root*/
+:root {
+  --timing-function: cubic-bezier(0.82, 0.2, 0.42, 1);
+}
+
+/*Fin Root*/
 /*Variables*/
 /*Fin Variables*/
 /*mixin*/
 /*Fin mixin*/
 /*Extend*/
-.flexCenter, .botonScroll a {
+.flexCenter, footer .redesFooter, .nuevoPrincipal .imgNuevoPrincipal .camisetaArg2022, .nuevoPrincipal .imgNuevoPrincipal .botinesAF50, .nuevoPrincipal, .nombrePrincipal, .botonScroll a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.fondoAzul {
+  background-color: #0F1758;
+}
+
+.fondoBlanco {
+  background-color: #E6E2ED;
 }
 
 /*Fin Extend*/
@@ -32,14 +51,12 @@
   font-size: 20px;
   height: 100%;
   width: 100%;
-  background-color: none;
-  text-decoration: none;
-  border: 2px #0f1650 solid;
   background-color: #E6E2ED;
+  border: 2px #0d1242 solid;
   transition: all 0.4s;
 }
 .botonScroll a i {
-  color: #0f1650;
+  color: #0d1242;
   transition: all 0.4s;
 }
 .botonScroll a:hover {
@@ -53,9 +70,592 @@
 }
 
 /*Fin Boton Scroll*/
-/*Barra dezplazamiento*/
-/*Fin Barra dezplazamiento*/
-/*Header*/
-/*Fin Header*/
+/*Body*/
+body {
+  background-color: #E6E2ED;
+  display: flex;
+  flex-direction: column;
+  /*Barra dezplazamiento*/
+  /*Fin Barra dezplazamiento*/
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #0F1758;
+  border-radius: 20px;
+  border: 3px solid #0F1758;
+}
+body::-webkit-scrollbar-track {
+  border-left: 1px solid #E6E2ED;
+  background: #E6E2ED;
+}
+
+/*Fin Body*/
+/*---------------------------Header---------------------------*/
+nav {
+  background-color: #0d1242;
+  font-size: 25px;
+  border-bottom: 2px #E6E2ED solid;
+  width: 100%;
+}
+nav .nav-link {
+  margin: 5px 20px;
+}
+nav .nav-link:hover {
+  color: grey !important;
+}
+
+/*---------------------------Fin Header---------------------------*/
+/*---------------------------Inicio---------------------------*/
+/*Titulo Inicio*/
+.nombrePrincipal {
+  height: 700px;
+  width: 100%;
+  background-color: none;
+  background-image: url(../Multimedia/Imagenes/EstadioFutbol1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  justify-content: flex-start;
+}
+.nombrePrincipal .nombreTienda {
+  height: 300px;
+  width: 40%;
+  background-color: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.nombrePrincipal .nombreTienda .textoPrincipal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.nombrePrincipal .nombreTienda .textoPrincipal p {
+  padding: 20px 30px;
+  font-size: 20px;
+}
+.nombrePrincipal .nombreTienda h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 100;
+  letter-spacing: 10px;
+}
+
+/*Fin Titulo Inicio*/
+/*Lo nuevo*/
+.nuevoPrincipal {
+  height: 1400px;
+  width: 100%;
+  background-color: none;
+  background-image: url(../Multimedia/Imagenes/wave\ \(1\).svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  padding-bottom: 120px;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.nuevoPrincipal h2 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  padding-bottom: 30px;
+}
+.nuevoPrincipal .imgNuevoPrincipal {
+  height: 700px;
+  width: 100%;
+  background-color: rgba(243, 243, 243, 0.2);
+  display: flex;
+  justify-content: center;
+}
+.nuevoPrincipal .imgNuevoPrincipal .botinesAF50 {
+  width: 45%;
+  background-image: url(../Multimedia/Imagenes/Botines\ adidas\ fondo.jpg);
+  background-position: center;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.nuevoPrincipal .imgNuevoPrincipal .camisetaArg2022 {
+  width: 45%;
+  background-image: url(../Multimedia/Imagenes/camiseta\ arg\ fondo.jpg);
+  background-position: right;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.nuevoPrincipal .imgNuevoPrincipal h3 {
+  font-size: 26px;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+.nuevoPrincipal .imgNuevoPrincipal a {
+  color: white;
+  font-size: 22px;
+  font-weight: 100;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 170px;
+  text-align: center;
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: color 0s 0.25s var(--timing-function);
+  border: 1px solid #E6E2ED;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  border-radius: 75px;
+}
+.nuevoPrincipal .imgNuevoPrincipal a::before, .nuevoPrincipal .imgNuevoPrincipal a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.nuevoPrincipal .imgNuevoPrincipal a::before {
+  content: "";
+  top: 50%;
+  transform: translate(-101%, -50%);
+  height: 100%;
+  z-index: 1;
+  background: white;
+  transition: transform 0.5s var(--timing-function);
+  background-color: #E6E2ED;
+}
+.nuevoPrincipal .imgNuevoPrincipal a::after {
+  content: attr(data-icon);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  opacity: 0;
+  transition: opacity 0s 0.25s var(--timing-function);
+}
+.nuevoPrincipal .imgNuevoPrincipal a:hover {
+  color: transparent;
+  transition: all 500ms;
+}
+.nuevoPrincipal .imgNuevoPrincipal a:hover::before {
+  transform: translate(101%, -50%);
+  background-color: #E6E2ED;
+}
+.nuevoPrincipal .imgNuevoPrincipal a:hover::after {
+  opacity: 1;
+}
+
+/*Fin Lo nuevo*/
+/*Galeria de inicio*/
+.galeria {
+  height: auto;
+  width: 100%;
+  background-color: none;
+  padding-bottom: 200px;
+}
+.galeria .svg {
+  height: auto;
+  width: 100%;
+  background-color: none;
+}
+.galeria .fotosGaleria {
+  height: 500px;
+  width: 100%;
+  background-color: none;
+  display: flex;
+  justify-content: space-around;
+}
+.galeria .fotosGaleria .ipelotas {
+  background-image: url(../Multimedia/Imagenes/mundial1.jpg);
+  height: 100%;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px #0F1758 solid;
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .ipelotas:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .fondoGris {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(217, 217, 217, 0.7);
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .fondoGris a {
+  color: black;
+  font-size: 30px;
+  font-weight: 350;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galeria .fotosGaleria .fondoGris a:hover {
+  color: transparent;
+}
+.galeria .fotosGaleria .fondoGris:hover {
+  background: none;
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .ibotines {
+  background-image: url(../Multimedia/Imagenes/nike1.jpg);
+  height: 100%;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px #0F1758 solid;
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .ibotines:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .fondoGris {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(217, 217, 217, 0.7);
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .fondoGris a {
+  color: black;
+  font-size: 30px;
+  font-weight: 350;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galeria .fotosGaleria .fondoGris a:hover {
+  color: transparent;
+}
+.galeria .fotosGaleria .fondoGris:hover {
+  background: none;
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .icamisetas {
+  background-image: url(../Multimedia/Imagenes/boca1.jpg);
+  height: 100%;
+  width: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px #0F1758 solid;
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .icamisetas:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .fondoGris {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(217, 217, 217, 0.7);
+  transition: all 0.5s;
+}
+.galeria .fotosGaleria .fondoGris a {
+  color: black;
+  font-size: 30px;
+  font-weight: 350;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.galeria .fotosGaleria .fondoGris a:hover {
+  color: transparent;
+}
+.galeria .fotosGaleria .fondoGris:hover {
+  background: none;
+  transition: all 0.5s;
+}
+
+/*Fin Galeria de inicio*/
+/*Responsive Inicio*/
+@media only screen and (max-width: 529px) {
+  .nombrePrincipal {
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+  }
+  .nombrePrincipal .nombreTienda {
+    width: 60%;
+    height: 40px;
+  }
+  .nombrePrincipal .nombreTienda h1 {
+    font-size: 25px;
+    font-weight: 100;
+  }
+  .nombrePrincipal .nombreTienda .textoPrincipal {
+    display: none;
+  }
+  .nuevoPrincipal {
+    height: 900px;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .nuevoPrincipal h2 {
+    font-size: 30px;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal .camisetaArg2022 {
+    width: 90%;
+    height: 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-position: center;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal h3 {
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal .botinesAF50 {
+    width: 90%;
+    height: 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-position: center;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal .botonComprar {
+    margin-bottom: 20px;
+    padding: 8px 20px;
+    font-size: 16px;
+  }
+  .galeria .fotosGaleria {
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  .galeria .fotosGaleria .fotoInd {
+    height: 25%;
+    width: 50%;
+  }
+  .galeria .fotosGaleria .fotoInd .fondoGris a {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 1299px) {
+  .nombrePrincipal {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .nombrePrincipal .nombreTienda {
+    width: 50%;
+    height: 80px;
+  }
+  .nombrePrincipal .nombreTienda h1 {
+    font-size: 30px;
+    font-weight: 100;
+  }
+  .nombrePrincipal .nombreTienda .textoPrincipal {
+    display: none;
+  }
+  .nuevoPrincipal {
+    height: 600px;
+    padding-bottom: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .nuevoPrincipal h2 {
+    font-size: 30px;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal {
+    height: 50%;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal h3 {
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .nuevoPrincipal .imgNuevoPrincipal .botonComprar {
+    margin-bottom: 20px;
+    padding: 11px 30px;
+    font-size: 16px;
+  }
+  .galeria .fotosGaleria {
+    height: 250px;
+  }
+  .galeria .fotosGaleria .fotoInd {
+    height: 100%;
+    width: 25%;
+  }
+  .galeria .fotosGaleria .fotoInd .fondoGris a {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 1299px) {
+  .nombrePrincipal {
+    background-size: cover;
+  }
+}
+/*Fin Responsive Inicio*/
+/*---------------------------Fin Inicio---------------------------*/
+/*---------------------------Footer---------------------------*/
+footer {
+  height: 400px;
+  width: 100%;
+  background-color: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80%, 20%;
+  justify-items: center;
+  border-top: 2px #E6E2ED solid;
+}
+footer .footerArriba {
+  grid-row: 1/2;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+footer .footerArriba ul {
+  list-style: none;
+  display: flex;
+}
+footer .footerArriba .navFooter ul li {
+  margin: 5px 10px;
+  font-size: 20px;
+  display: flex;
+}
+footer .footerArriba .redesFooter ul li {
+  margin: 10px 30px;
+  font-size: 28px;
+}
+footer .navFooter {
+  height: 100%;
+  width: 60%;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .navFooter ul li a {
+  text-decoration: none;
+  padding: 15px 25px;
+  transition: 0.2s;
+}
+footer .navFooter ul li a:hover {
+  background-color: #E6E2ED;
+  color: #0F1758;
+  transition: 0.2s;
+}
+footer .redesFooter {
+  height: 100%;
+  width: 40%;
+  background-color: none;
+}
+footer .redesFooter ul li a {
+  padding: 10px;
+}
+footer .redesFooter ul li a .ainsta:hover {
+  color: #c13584;
+  transition: all 0.3s;
+}
+footer .redesFooter ul li a .afb:hover {
+  color: #4267B2;
+  transition: all 0.3s;
+}
+footer .redesFooter ul li a .atw:hover {
+  color: #1DA1F2;
+  transition: all 0.3s;
+}
+footer .redesFooter ul li a .ayt:hover {
+  color: #FF0000;
+  transition: all 0.3s;
+}
+footer .redesFooter ul li a .aem:hover {
+  color: #006aff;
+  transition: all 0.3s;
+}
+footer .derechosAutor {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  grid-row: 2/3;
+  grid-column: 1/3;
+  width: 100%;
+  text-align: center;
+  align-self: flex-end;
+  font-size: 18px;
+}
+
+/*Responsive Footer*/
+@media only screen and (max-width: 529px) {
+  footer {
+    height: 300px;
+  }
+  footer ul {
+    flex-wrap: wrap;
+  }
+  footer .footerArriba .navFooter ul li {
+    margin: 5px 5px;
+    font-size: 16px;
+  }
+  footer .footerArriba .redesFooter ul li {
+    margin: 5px 20px;
+    font-size: 20px;
+  }
+  footer .navFooter ul li a {
+    padding: 5px 10px;
+  }
+  footer .derechosAutor {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 530px) and (max-width: 1299px) {
+  footer {
+    height: 200px;
+  }
+  footer ul {
+    flex-wrap: wrap;
+  }
+  footer .footerArriba .navFooter ul li {
+    margin: 5px 5px;
+    font-size: 16px;
+  }
+  footer .footerArriba .redesFooter ul li {
+    margin: 5px 20px;
+    font-size: 20px;
+  }
+  footer .navFooter ul li a {
+    padding: 5px 15px;
+  }
+  footer .derechosAutor {
+    font-size: 14px;
+  }
+}
+/*Fin Responsive Footer*/
+/*---------------------------Fin Footer---------------------------*/
 
 /*# sourceMappingURL=estilo.css.map */
