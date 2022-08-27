@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Variables*/
+$azulFondo:#11185A;
+$BlancoFondo:#E6E2ED;
+/*Fin Variables*/
+
+/*mixin*/
+@mixin size($alto, $ancho, $colorf) {
+    height: $alto;
+    width: $ancho;
+    background-color: $colorf;
+}
+/*Fin mixin*/
+
+/*Extend*/
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Fin Extend*/
+
+/*Msps*/
+/*Fin Msps*/
+
+/*Boton Scroll*/
+.botonScroll {
+	@include size(40px,40px,none );
+	position: fixed;
+	right: 1%;
+	bottom: 2%;
+	z-index: 100;
+	a {
+		font-size: 20px;
+		@include size(100%,100% ,none );
+		text-decoration: none;
+		@extend .flexCenter;
+		border: 2px #0f1650 solid;
+		background-color: $BlancoFondo;
+		transition: all 0.4s;
+		i {
+			color: #0f1650;
+			transition: all 0.4s;
+		}
+		&:hover {
+			border-radius: 50%;
+			transition: all 0.4s;
+			transform: rotate(45deg);
+			i {
+				transition: all 0.4s;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+/*Fin Boton Scroll*/
+
+/*Barra dezplazamiento*/
+/*Fin Barra dezplazamiento*/
+
+/*Header*/
+/*Fin Header*/
