@@ -20,3 +20,22 @@
             </ul>
 
             <a class="navbar-brand" href="#"><img src="./Multimedia/Imagenes/soccer-field.png" alt="logo pagina"></a>
+
+
+            .botonComprar {
+			margin-bottom: 50px;
+			padding: 15px 50px;
+			background: rgba($color: #000000, $alpha: 0.2);
+			cursor: pointer;
+			border: 2px $BlancoFondo solid;
+			color: $BlancoFondo;
+			font-size: 20px;
+			text-align: center;
+			border-radius: 75px;
+			transition: all 300ms;
+			
+			&:hover{
+				background-color: #0d1242;
+				transition: all 300ms;
+			}
+		}

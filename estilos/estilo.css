@@ -26,6 +26,13 @@
   align-items: center;
 }
 
+.flexCenterColumn, .consulta, .preguntasFrecuentes, #bodyContacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .fondoAzul {
   background-color: #0F1758;
 }
@@ -37,7 +44,7 @@
 /*Fin Extend*/
 /*Msps*/
 /*Fin Msps*/
-/*Boton Scroll*/
+/*---------------------------Boton Scroll---------------------------*/
 .botonScroll {
   height: 40px;
   width: 40px;
@@ -69,8 +76,8 @@
   transform: rotate(-45deg);
 }
 
-/*Fin Boton Scroll*/
-/*Body*/
+/*---------------------------Fin Boton Scroll---------------------------*/
+/*---------------------------Body---------------------------*/
 body {
   background-color: #E6E2ED;
   display: flex;
@@ -84,14 +91,14 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #0F1758;
   border-radius: 20px;
-  border: 3px solid #0F1758;
+  border: 1px solid #E6E2ED;
 }
 body::-webkit-scrollbar-track {
   border-left: 1px solid #E6E2ED;
   background: #E6E2ED;
 }
 
-/*Fin Body*/
+/*---------------------------Fin Body---------------------------*/
 /*---------------------------Header---------------------------*/
 nav {
   background-color: #0d1242;
@@ -657,5 +664,286 @@ footer .derechosAutor {
 }
 /*Fin Responsive Footer*/
 /*---------------------------Fin Footer---------------------------*/
+/*---------------------------Contacto---------------------------*/
+#bodyContacto {
+  background-image: url(../Multimedia/Imagenes/patronAzul.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  justify-content: flex-start;
+}
+
+.preguntasFrecuentes {
+  height: auto;
+  width: 75%;
+  background-color: #E6E2ED;
+  justify-content: flex-start;
+}
+.preguntasFrecuentes h1 {
+  color: black;
+  font-size: 35px;
+  font-weight: 200;
+  width: 80%;
+  padding-top: 40px;
+  border-bottom: 1px #0d1242 solid;
+}
+.preguntasFrecuentes .preguntas {
+  width: 75%;
+}
+.preguntasFrecuentes .preguntas .preguntaInd {
+  padding-bottom: 50px;
+}
+.preguntasFrecuentes .preguntas .preguntaInd h2 {
+  color: black;
+  font-size: 24px;
+  font-weight: 400;
+  border-bottom: 1px #0d1242 solid;
+}
+.preguntasFrecuentes .preguntas .preguntaInd p {
+  color: black;
+  text-align: justify;
+  font-size: 18px;
+}
+
+/*Formulario*/
+.consulta {
+  height: auto;
+  width: 75%;
+  background-color: none;
+  background-image: url(../Multimedia/Imagenes/wave-haikei.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #0F1758;
+  justify-content: flex-start;
+}
+.consulta h2 {
+  text-align: center;
+  font-size: 30px;
+  width: 75%;
+  margin-top: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.consulta .formulario {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4fr, 4fr, 1fr;
+  border: 1px #E6E2ED solid;
+  margin-bottom: 100px;
+}
+.consulta .formulario .label {
+  margin: 30px;
+}
+.consulta .formulario .label label {
+  color: #E6E2ED;
+  font-size: 20px;
+  font-weight: 200;
+}
+.consulta .formulario .label input {
+  margin-top: 10px;
+  height: 80%;
+  width: 80%;
+  background-color: #0d1242;
+  border: none;
+  font-size: 18px;
+  padding: 0 5px;
+}
+.consulta .formulario .label input:invalid {
+  border: 2px solid red;
+}
+.consulta .formulario .label textarea {
+  margin-top: 10px;
+  height: 80%;
+  width: 90%;
+  background-color: #0d1242;
+  border: none;
+  font-size: 18px;
+  resize: none;
+}
+.consulta .formulario .label textarea:invalid {
+  border: 2px solid red;
+}
+.consulta .formulario .label1 {
+  grid-row: 1/2;
+  grid-column: 1/2;
+}
+.consulta .formulario .label2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.consulta .formulario .label3 {
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+.consulta .formulario .label4 {
+  grid-row: 3/4;
+  grid-column: 1/3;
+  display: flex;
+  justify-content: center;
+}
+.consulta .formulario .label4 .botonConsulta {
+  height: 100%;
+  width: 40%;
+  background-color: #0d1242;
+  transition: all 0.5s;
+  display: block;
+}
+.consulta .formulario .label4 .botonConsulta:hover {
+  cursor: pointer;
+  background-color: #E6E2ED;
+  color: #0d1242;
+  transition: all 0.5s;
+}
+
+/*Fin Formulario*/
+/*Responsive Formulario*/
+@media only screen and (max-width: 880px) {
+  .preguntasFrecuentes {
+    width: 95%;
+  }
+  .preguntasFrecuentes h1 {
+    font-size: 35px;
+    width: 90%;
+  }
+  .preguntasFrecuentes .preguntas {
+    width: 85%;
+  }
+  .preguntasFrecuentes .preguntas .preguntaInd {
+    padding-bottom: 30px;
+  }
+  .preguntasFrecuentes .preguntas .preguntaInd h2 {
+    font-size: 20px;
+  }
+  .preguntasFrecuentes .preguntas .preguntaInd p {
+    font-size: 16px;
+  }
+  .consulta {
+    width: 95%;
+  }
+  .consulta h2 {
+    font-size: 28px;
+  }
+  .consulta .formulario {
+    width: 85%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr, 2fr, 4fr, 1fr;
+  }
+  .consulta .formulario .label label {
+    font-size: 20px;
+  }
+  .consulta .formulario .label input {
+    width: 100%;
+  }
+  .consulta .formulario .label textarea {
+    width: 100%;
+  }
+  .consulta .formulario .label1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .consulta .formulario .label2 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+  .consulta .formulario .label3 {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .consulta .formulario .label4 {
+    grid-row: 4/5;
+    grid-column: 1/3;
+  }
+}
+/*Fin Responsive Formulario*/
+/*---------------------------Fin Contacto---------------------------*/
+/*---------------------------Quines Somos---------------------------*/
+.tituloQuienesSomos {
+  width: 100%;
+  height: 600px;
+  background-image: url(../Multimedia/Imagenes/82f62e7b37bea73bfcaea2bf1dc5771f.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+.tituloQuienesSomos .quienesSomosVsg {
+  width: 100%;
+  height: 90%;
+  background-image: url(../Multimedia/Imagenes/wave\ \(4\).svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+}
+.tituloQuienesSomos .quienesSomosVsg h1 {
+  padding: 60px;
+}
+
+.sectionInfo {
+  display: flex;
+  justify-content: center;
+}
+
+.cajaGrandeInfo {
+  width: 80%;
+  height: auto;
+  padding-bottom: 120px;
+  display: flex;
+  margin: 100px 0;
+}
+.cajaGrandeInfo .cajaChicaInfo {
+  background-color: #E6E2ED;
+  width: 50%;
+}
+.cajaGrandeInfo .cajaChicaInfo h2 {
+  color: #0f1650;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 30px;
+}
+.cajaGrandeInfo .cajaChicaInfo p {
+  color: black;
+  font-size: 22px;
+  text-align: justify;
+  padding: 10px 20px;
+}
+.cajaGrandeInfo .imgInfo {
+  width: 50%;
+  height: 100%;
+  background-image: url(../Multimedia/Imagenes/LocalPelotas.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.cajaMapa {
+  height: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-image: url(../Multimedia/Imagenes/wave\ \(5\).svg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.cajaMapa .mapa {
+  margin-bottom: 200px;
+  width: 65%;
+  height: 50%;
+}
+.cajaMapa .mapa h2 {
+  text-align: center;
+  color: #0F1758;
+  font-size: 35px;
+}
+.cajaMapa .mapa iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*---------------------------Fin Quines Somos---------------------------*/
 
 /*# sourceMappingURL=estilo.css.map */
