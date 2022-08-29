@@ -26,7 +26,7 @@
   align-items: center;
 }
 
-.flexCenterColumn, .consulta, .preguntasFrecuentes, #bodyContacto {
+.flexCenterColumn, .jugadores .jugador, .cajaMapa, .consulta, .preguntasFrecuentes, #bodyContacto {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -858,9 +858,11 @@ footer .derechosAutor {
 /*Fin Responsive Formulario*/
 /*---------------------------Fin Contacto---------------------------*/
 /*---------------------------Quines Somos---------------------------*/
+/*Titulo*/
 .tituloQuienesSomos {
-  width: 100%;
   height: 600px;
+  width: 100%;
+  background-color: none;
   background-image: url(../Multimedia/Imagenes/82f62e7b37bea73bfcaea2bf1dc5771f.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -868,8 +870,9 @@ footer .derechosAutor {
   align-items: flex-end;
 }
 .tituloQuienesSomos .quienesSomosVsg {
-  width: 100%;
   height: 90%;
+  width: 100%;
+  background-color: none;
   background-image: url(../Multimedia/Imagenes/wave\ \(4\).svg);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -881,14 +884,17 @@ footer .derechosAutor {
   padding: 60px;
 }
 
+/*Fin Titulo*/
+/*Info*/
 .sectionInfo {
   display: flex;
   justify-content: center;
 }
 
 .cajaGrandeInfo {
-  width: 80%;
   height: auto;
+  width: 80%;
+  background-color: none;
   padding-bottom: 120px;
   display: flex;
   margin: 100px 0;
@@ -898,7 +904,7 @@ footer .derechosAutor {
   width: 50%;
 }
 .cajaGrandeInfo .cajaChicaInfo h2 {
-  color: #0f1650;
+  color: #0d1242;
   text-decoration: underline;
   text-align: center;
   font-size: 30px;
@@ -910,29 +916,30 @@ footer .derechosAutor {
   padding: 10px 20px;
 }
 .cajaGrandeInfo .imgInfo {
-  width: 50%;
   height: 100%;
+  width: 50%;
+  background-color: none;
   background-image: url(../Multimedia/Imagenes/LocalPelotas.jpg);
   background-repeat: none;
   background-size: cover;
   background-position: center;
 }
 
+/*Fin Info*/
+/*Mapa*/
 .cajaMapa {
   height: 1300px;
-  display: flex;
-  flex-direction: column;
   justify-content: flex-end;
-  align-items: center;
   background-image: url(../Multimedia/Imagenes/wave\ \(5\).svg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
 }
 .cajaMapa .mapa {
-  margin-bottom: 200px;
-  width: 65%;
   height: 50%;
+  width: 65%;
+  background-color: none;
+  margin-bottom: 200px;
 }
 .cajaMapa .mapa h2 {
   text-align: center;
@@ -940,10 +947,636 @@ footer .derechosAutor {
   font-size: 35px;
 }
 .cajaMapa .mapa iframe {
-  width: 100%;
   height: 100%;
+  width: 100%;
+  background-color: none;
 }
 
+/*Fin Mapa*/
+/*Respomsive Quienes somos*/
+@media only screen and (max-width: 880px) {
+  .preguntasFrecuentes {
+    width: 95%;
+  }
+  .preguntasFrecuentes h1 {
+    font-size: 35px;
+    width: 90%;
+  }
+  .preguntasFrecuentes .preguntas {
+    width: 85%;
+  }
+  .preguntasFrecuentes .preguntas .preguntaInd {
+    padding-bottom: 30px;
+  }
+  .preguntasFrecuentes .preguntas .preguntaInd h2 {
+    font-size: 20px;
+  }
+  .preguntasFrecuentes .preguntas .preguntaInd p {
+    font-size: 16px;
+  }
+  .consulta {
+    width: 95%;
+  }
+  .consulta h2 {
+    font-size: 28px;
+  }
+  .consulta .formulario {
+    width: 85%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr, 2fr, 4fr, 1fr;
+  }
+  .consulta .formulario .label label {
+    font-size: 20px;
+  }
+  .consulta .formulario .label input {
+    width: 100%;
+  }
+  .consulta .formulario .label textarea {
+    width: 100%;
+  }
+  .consulta .formulario .label1 {
+    grid-row: 1/2;
+    grid-column: 1/3;
+  }
+  .consulta .formulario .label2 {
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+  .consulta .formulario .label3 {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+  .consulta .formulario .label4 {
+    grid-row: 4/5;
+    grid-column: 1/3;
+  }
+  .cajaGrandeInfo {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+  }
+  .cajaGrandeInfo .cajaChicaInfo {
+    width: 100%;
+    height: 100%;
+  }
+  .cajaGrandeInfo .imgInfo {
+    display: none;
+  }
+  .cajaMapa {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: url(../Multimedia/Imagenes/wave\ \(5\).svg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .cajaMapa .mapa {
+    margin-bottom: 200px;
+    width: 80%;
+    height: 50%;
+  }
+  .ventaDeProd .catalogoProd {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+  .ventaDeProd .catalogoProd a {
+    width: 80%;
+    height: 250px;
+  }
+  .ventaDeProd .catalogoProd a .imgPelota {
+    height: 80%;
+    width: 100%;
+  }
+  .ventaDeProd .catalogoProd .nombrePrecio {
+    width: 100%;
+    height: 20%;
+  }
+}
+/*Fin Respomsive Quienes somos*/
 /*---------------------------Fin Quines Somos---------------------------*/
+/*---------------------------Botines---------------------------*/
+.galeriaMarcas {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 150px;
+}
+.galeriaMarcas .tituloMarcas {
+  margin: 50px;
+}
+.galeriaMarcas .tituloMarcas h1 {
+  color: #0f1650;
+  text-align: center;
+  font-size: 40px;
+}
+.galeriaMarcas .tituloMarcas p {
+  color: #0f1650;
+  text-align: center;
+  font-size: 22px;
+}
+.galeriaMarcas .marcas {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  grid-auto-rows: minmax(300px, auto);
+  gap: 20px;
+  padding: 20px;
+}
+.galeriaMarcas .marcas .marca1 {
+  background-image: url(../Multimedia/Imagenes/BotinesAdidas.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.galeriaMarcas .marcas .marca2 {
+  background-image: url(../Multimedia/Imagenes/BotinesNike.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.galeriaMarcas .marcas .marca3 {
+  background-image: url(../Multimedia/Imagenes/BotinesPuma.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.galeriaMarcas .marcas .marca4 {
+  background-image: url(../Multimedia/Imagenes/BotinesNewBalance.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.galeriaMarcas .marcas .marca5 {
+  background-image: url(../Multimedia/Imagenes/BotinesMizuno.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.galeriaMarcas .marcas .marca6 {
+  background-image: url(../Multimedia/Imagenes/BotinesUnderArmour.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.galeriaMarcas .marcas .marcaInd a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+}
+.galeriaMarcas .marcas .marcaInd a h2 {
+  text-decoration: none;
+  font-size: 30px;
+  width: 100%;
+  height: 50%;
+  font-weight: 800;
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: 0.5s;
+}
+.galeriaMarcas .marcas .marcaInd a p {
+  color: #E6E2ED;
+  text-decoration: none;
+  width: 100%;
+  height: 50%;
+  font-weight: 100;
+  text-align: center;
+  transition: 0.5s;
+}
+.galeriaMarcas .marcas .marcaInd a:hover {
+  background: none;
+  transition: 0.5s;
+}
+.galeriaMarcas .marcas .marcaInd a:hover h2, .galeriaMarcas .marcas .marcaInd a:hover p {
+  color: transparent;
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+.galeriaMarcas .terrenos {
+  gap: 0px;
+  padding: 0;
+}
+
+.jugadores {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-auto-rows: minmax(600px, auto);
+  gap: 40px;
+  padding: 100px 20px;
+  background-image: url(../Multimedia/Imagenes/patronAzul.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+}
+.jugadores .jugador {
+  height: 100%;
+  background-color: #E6E2ED;
+  justify-content: space-between;
+  /*a {
+  	color: $BlancoFondo;
+  	text-decoration: none;
+  	padding: 10px 25px;
+  	border: 1px $azulFondo solid;
+  	margin-bottom: 30px;
+  	background-color: $azulFondo;
+  	transition: 0.3s;
+  	&:hover {
+  		color: $azulFondo;
+  		background-color: $BlancoFondo;
+  		transition: 0.3s;
+  	}
+  }*/
+}
+.jugadores .jugador h3 {
+  color: #0F1758;
+  text-align: center;
+  font-size: 30px;
+}
+.jugadores .jugador p {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+.jugadores .jugador a {
+  color: white;
+  font-size: 22px;
+  font-weight: 100;
+  background-color: #0F1758;
+  width: 170px;
+  text-align: center;
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  overflow: hidden;
+  transition: color 0s 0.25s var(--timing-function);
+  border: 2px solid #0d1242;
+  margin-bottom: 50px;
+  margin-top: 15px;
+  border-radius: 75px;
+}
+.jugadores .jugador a::before, .jugadores .jugador a::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+.jugadores .jugador a::before {
+  content: "";
+  top: 50%;
+  transform: translate(-101%, -50%);
+  height: 100%;
+  z-index: 1;
+  background: white;
+  transition: transform 0.5s var(--timing-function);
+  background-color: #E6E2ED;
+}
+.jugadores .jugador a::after {
+  content: attr(data-icon);
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  opacity: 0;
+  transition: opacity 0s 0.25s var(--timing-function);
+}
+.jugadores .jugador a:hover {
+  color: transparent;
+  transition: all 500ms;
+}
+.jugadores .jugador a:hover::before {
+  transform: translate(101%, -50%);
+  background-color: #E6E2ED;
+}
+.jugadores .jugador a:hover::after {
+  opacity: 1;
+}
+.jugadores input {
+  display: none;
+}
+
+.jcr7 {
+  background-image: url(../Multimedia/Imagenes/CR7.jpg);
+  background-size: cover;
+  height: 75%;
+  width: 100%;
+}
+
+.jmessi {
+  background-image: url(../Multimedia/Imagenes/Messi.jpg);
+  background-size: cover;
+  height: 75%;
+  width: 100%;
+}
+
+.jneymar {
+  background-image: url(../Multimedia/Imagenes/Neymar.jpg);
+  background-size: cover;
+  height: 75%;
+  width: 100%;
+}
+
+.jcr7 {
+  background-position: top;
+}
+
+.jmessi, .jneymar {
+  background-position: center;
+}
+
+.Terreno1 {
+  background-image: url(../Multimedia/Imagenes/FG.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.Terreno2 {
+  background-image: url(../Multimedia/Imagenes/SG.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.Terreno3 {
+  background-image: url(../Multimedia/Imagenes/CespedSintetico.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tipoBota1 {
+  background-image: url(../Multimedia/Imagenes/BotinesAltos.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tipoBota2 {
+  background-image: url(../Multimedia/Imagenes/BotinesCortos.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.tipoBota3 {
+  background-image: url(../Multimedia/Imagenes/botinesCuero.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/*Responsive Botines y camisetas*/
+@media only screen and (max-width: 529px) {
+  .galeriaMarcas .marcas {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+  }
+  .galeriaMarcas .terrenos {
+    gap: 0px;
+  }
+  .jugadores {
+    grid-auto-rows: minmax(300px, auto);
+  }
+  .jugadores .jugador h3 {
+    font-size: 25px;
+  }
+  .jugadores .jugador p {
+    display: none;
+  }
+  #camisetas {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 30px;
+  }
+  #camisetas h2 {
+    font-size: 20px;
+    font-weight: 200;
+  }
+}
+@media only screen and (max-width: 1630px) {
+  .jugadores {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .jugadores .jugador {
+    width: 50%;
+  }
+}
+/*Fin Responsive Botines y camisetas*/
+/*---------------------------Fin Botines---------------------------*/
+/*---------------------------Camisetas---------------------------*/
+#camisetas {
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-auto-rows: minmax(500px, auto);
+}
+
+.marcaCamiseta1 {
+  background-image: url(../Multimedia/Imagenes/CamisetaAdidas.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta2 {
+  background-image: url(../Multimedia/Imagenes/CamisetaNike.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta3 {
+  background-image: url(../Multimedia/Imagenes/Camiseta.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta4 {
+  background-image: url(../Multimedia/Imagenes/CamisetaKappa.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta5 {
+  background-image: url(../Multimedia/Imagenes/CamisetaUmbro.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta6 {
+  background-image: url(../Multimedia/Imagenes/CamisetaUnderArmour.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta7 {
+  background-image: url(../Multimedia/Imagenes/CamisetaJoma.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta8 {
+  background-image: url(../Multimedia/Imagenes/CamisetaMacron.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta9 {
+  background-image: url(../Multimedia/Imagenes/CamisetaHummel.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.marcaCamiseta10 {
+  background-image: url(../Multimedia/Imagenes/CamisetaCastore.jpg);
+  background-position: top;
+  background-size: cover;
+}
+
+.selecciones {
+  background-image: url(../Multimedia/Imagenes/CamisetaBrasil.webp);
+  background-position: top;
+  background-size: cover;
+  height: 75%;
+  width: 100%;
+}
+
+.clubes {
+  background-image: url(../Multimedia/Imagenes/CamisetaPsg.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 75%;
+  width: 100%;
+}
+
+.retro {
+  background-image: url(../Multimedia/Imagenes/CamisetaRetro.jpg);
+  background-position: top;
+  background-size: cover;
+  height: 75%;
+  width: 100%;
+}
+
+/*---------------------------Fin Fin Camisetas---------------------------*/
+/*---------------------------Pelotas---------------------------*/
+.marcaPelota1 {
+  background-image: url(../Multimedia/Imagenes/Pelota\ mundial2.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.marcaPelota2 {
+  background-image: url(../Multimedia/Imagenes/PelotaNike.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.marcaPelota3 {
+  background-image: url(../Multimedia/Imagenes/PelotaPuma.jfif);
+  background-position: center;
+  background-size: cover;
+}
+
+.marcaPelota4 {
+  background-image: url(../Multimedia/Imagenes/PelotaNB.jfif);
+  background-position: center;
+  background-size: cover;
+}
+
+.marcaPelota5 {
+  background-image: url(../Multimedia/Imagenes/PelotaUmbro.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.marcaPelota6 {
+  background-image: url(../Multimedia/Imagenes/PelotaUnder.jfif);
+  background-position: center;
+  background-size: cover;
+}
+
+.ventaDeProd {
+  width: 100%;
+  height: auto;
+  background-image: url(../Multimedia/Imagenes/patronAzul.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.ventaDeProd h2 {
+  padding: 30px;
+}
+.ventaDeProd .catalogoProd {
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  justify-items: center;
+}
+.ventaDeProd .catalogoProd a {
+  text-decoration: none;
+  width: 300px;
+  height: 330px;
+  margin: 40px 0;
+}
+.ventaDeProd .catalogoProd a .imgPelota {
+  height: 300px;
+  width: 300px;
+  background-image: url(../Multimedia/Imagenes/Pelota\ mundial2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.ventaDeProd .catalogoProd a h5 {
+  color: black;
+}
+.ventaDeProd .catalogoProd .nombrePrecio {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  height: 30px;
+  padding-top: 5px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/*Responsive Pelotas*/
+@media only screen and (max-width: 880px) {
+  .ventaDeProd .catalogoProd {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+  .ventaDeProd .catalogoProd a {
+    width: 80%;
+    height: 250px;
+  }
+  .ventaDeProd .catalogoProd a .imgPelota {
+    height: 80%;
+    width: 100%;
+  }
+  .ventaDeProd .catalogoProd .nombrePrecio {
+    width: 100%;
+    height: 20%;
+  }
+}
+@media only screen and (max-width: 1630px) {
+  .ventaDeProd .catalogoProd {
+    width: 75%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+}
+/*Fin Responsive Pelotas*/
+/*---------------------------Fin Pelotas---------------------------*/
 
 /*# sourceMappingURL=estilo.css.map */
