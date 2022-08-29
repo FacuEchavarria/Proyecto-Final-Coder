@@ -1,0 +1,23 @@
+{
+  "name": "tienda-deportiva",
+  "version": "1.0.0",
+  "description": "Tienda Ficticia donde se vende productos de futbol.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FacuEchavarria/Proyecto-Final-Coderhouse.git"
+  },
+  "keywords": [
+    "\"Tienda\"",
+    "\"Futbol\""
+  ],
+  "author": "Facundo Echavarria Pacios",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FacuEchavarria/Proyecto-Final-Coderhouse/issues"
+  },
+  "homepage": "https://github.com/FacuEchavarria/Proyecto-Final-Coderhouse#readme"
+}
