@@ -1,0 +1,29 @@
+Agrege una descripcion para cada una de las paginas del sitio.
+Cambie algunos de los titulos. Agrege la palabra tienda adelante de camisetas, botines y pelotas.
+
+En el index como palabras clave use: "Tienda, Venta, Futbol, botines, pelotas, camisetas, Deporte, Argentina, Messi, Oferta, Football"
+Tienda - Venta - Oferta: Palabras relacionadas a la venta de productos.
+botines - pelotas - camisetas: Son los productosque ofrece la tienda.
+Futbol - Deporte - messi - Argentina - Football: Son palabras relacionadas con los productos de la tienda y la ubicacion de la misma.
+
+En ¿Quines somos?: "Tienda, Venta, Futbol, botines, pelotas, camisetas, Deporte, Argentina, Ubicacion, Preguntas, Football, Info, Informacion, Contacto"
+Use palabras repetidas que estan relacionadas a la Pagina.
+Ubicacion - Preguntas - Info - Informacion - Contacto: Son cosas que estan mostradas en la pagina o que estan relacionadas.
+
+En Botines, Camisetas y Pelotas Use las mismas palabras con algunas variaciones.
+
+Botines: "Tienda, Venta, Futbol, botines, Deporte, Argentina, Messi, Oferta, Football, botines futbol 11, botines futbol 5, Nike, Adidas, Puma"
+botines futbol 11 - botines futbol 5 - Nike - Adidas - Puma: Tipos de botines y marcas.
+
+Camisetas: "Tienda, Venta, Futbol, Camisetas, Deporte, Argentina, Messi, Oferta, Football, River, Boca, Psg, Nike, Adidas, Puma"
+river - boca - Psg - Argentina: Equipos mas famosos en Argentina.
+Nike - Puma - Adidas: marcas mas conocidas.
+
+Pelotas: "Tienda, Venta, Futbol, Pelotas, Deporte, Argentina, Oferta, Football, Adidas, Nike, Puma"
+Nike - Puma - Adidas: marcas mas conocidas.
+
+
+Contacto: "Tienda, Venta, Futbol, botines, pelotas, camisetas, Deporte, Argentina, Preguntas frecuentes, Preguntas, Football, Envio, Tiempo de envio, Contacto, retiro"
+Preguntas frecuentes - Preguntas - Envio - Tiempo de envio - Contacto - retiro: Son palabras relacionadas con el contenido de la pagina mas algunas dudas que busca la gente.
+
+Facundo Echavarria Pacios

@@ -421,13 +421,13 @@ nav .nav-link:hover {
     width: 100%;
     height: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
   }
   .nuevoPrincipal .imgNuevoPrincipal .camisetaArg2022 {
     width: 90%;
-    height: 50%;
+    height: 48%;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -442,7 +442,7 @@ nav .nav-link:hover {
   }
   .nuevoPrincipal .imgNuevoPrincipal .botinesAF50 {
     width: 90%;
-    height: 50%;
+    height: 48%;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -1183,20 +1183,6 @@ footer .derechosAutor {
   height: 100%;
   background-color: #E6E2ED;
   justify-content: space-between;
-  /*a {
-  	color: $BlancoFondo;
-  	text-decoration: none;
-  	padding: 10px 25px;
-  	border: 1px $azulFondo solid;
-  	margin-bottom: 30px;
-  	background-color: $azulFondo;
-  	transition: 0.3s;
-  	&:hover {
-  		color: $azulFondo;
-  		background-color: $BlancoFondo;
-  		transition: 0.3s;
-  	}
-  }*/
 }
 .jugadores .jugador h3 {
   color: #0F1758;
@@ -1334,6 +1320,25 @@ footer .derechosAutor {
 }
 
 /*Responsive Botines y camisetas*/
+@media only screen and (max-width: 380px) {
+  #camisetas {
+    grid-template-columns: 1;
+    grid-auto-rows: 10;
+    justify-items: center;
+    padding: 0;
+  }
+  #camisetas .marcaInd {
+    height: 400px;
+    width: 80%;
+    padding: 0;
+  }
+  .jugadores {
+    background-color: rebeccapurple;
+  }
+  .jugadores a {
+    color: rebeccapurple;
+  }
+}
 @media only screen and (max-width: 529px) {
   .galeriaMarcas .marcas {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1350,6 +1355,10 @@ footer .derechosAutor {
   }
   .jugadores .jugador p {
     display: none;
+  }
+  .jugadores .jugador a {
+    width: 80%;
+    font-size: 16px;
   }
   #camisetas {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
